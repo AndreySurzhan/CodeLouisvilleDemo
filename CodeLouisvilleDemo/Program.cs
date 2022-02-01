@@ -7,15 +7,16 @@ namespace AlphabetDemo
     {
         static void Main(string[] args)
         {
+            var methodNames = GetMethodNames(typeof(AlphabetUtils), "print").ToList();
+
             Console.WriteLine("Available methods:\n");
 
-            Console.WriteLine(@"
-            1 - PrintAlphabet
-            2 - PrintAlphabetBackwards
-            3 - PrintAlphabetSkipOneLetter
-            4 - PrintAlphabetUsingWhileLoop
-            5 - PrintAlphabetBackwardsUsingWhileLoop
-            6 - PrintAlphabetSkipOneLetterUsingWhileLoop");
+            for (int i = 0; i < methodNames.Count(); i++)
+            {
+                var methodNumber = i + 1;
+
+                Console.WriteLine($"{methodNumber} - {methodNames[i]}");
+            }
 
             Console.WriteLine("\n ==================================== \n ");
 
@@ -54,6 +55,7 @@ namespace AlphabetDemo
                break;
             }
         }
+
         //TASK: Possible to starn app and have promt displaying list of available methods to run. 
         // Promt should ask a question which method to run
         // input corresponding number or name of the method
@@ -62,6 +64,25 @@ namespace AlphabetDemo
         //3. Create logic to print out method names with question
         //4. Create logic to accept user's input 
         //5. based on user's input we should run method or promt an validation error
+        private static IEnumerable<string> GetMethodNames(Type type, string? containSubstring = default)
+        {
+            List<string> methodNames = new List<string>();
 
+            var methodInfos = type.GetMethods();
+
+            foreach (var methodInfo in methodInfos)
+            {
+                var name = methodInfo.Name;
+
+                if (!string.IsNullOrEmpty(containSubstring) && !name.ToLower().Contains(containSubstring))
+                {
+                    continue;
+                }
+
+                methodNames.Add(methodInfo.Name);
+            }
+
+            return methodNames;
+        }
     }
 }
