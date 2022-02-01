@@ -1,17 +1,21 @@
 ﻿using CodeLouisvilleDemo;
 using System;
+using System.Reflection;
 
 namespace AlphabetDemo
 {
     class Program
     {
+        
+
         static void Main(string[] args)
         {
             var methodNames = GetMethodNames(typeof(AlphabetUtils), "print").ToList();
+            var methodNamesCollectionSize = methodNames.Count;
 
             Console.WriteLine("Available methods:\n");
 
-            for (int i = 0; i < methodNames.Count(); i++)
+            for (int i = 0; i < methodNamesCollectionSize; i++)
             {
                 var methodNumber = i + 1;
 
@@ -22,37 +26,19 @@ namespace AlphabetDemo
 
             Console.WriteLine("Enter method number:");
 
-            int userInput = Convert.ToInt32(Console.ReadLine());
+            var userInput = Convert.ToInt32(Console.ReadLine());
+            
 
-            switch (userInput)
+            if (userInput > methodNamesCollectionSize || userInput < 1)
             {
-                case 1:
-                    AlphabetUtils.PrintAlphabet();
+                Console.WriteLine("invalid user input");
+            } else
+            {
+                var methodIndex = userInput - 1;
+                var methodName = methodNames[methodIndex];
+                var method = typeof(AlphabetUtils).GetMethod(methodName);
 
-                    break;
-                case 2:
-                    AlphabetUtils.PrintAlphabetBackwards();
-
-                    break;
-                case 3:
-                    AlphabetUtils.PrintAlphabetSkipOneLetter();
-
-                    break;
-                case 4:
-                    AlphabetUtils.PrintAlphabetUsingWhileLoop();
-
-                    break;
-                case 5:
-                    AlphabetUtils.PrintAlphabetBackwardsUsingWhileLoop();
-
-                    break;
-                case 6:
-                    AlphabetUtils.PrintAlphabetSkipOneLetterUsingWhileLoop();
-
-                    break;
-                default:
-                    Console.WriteLine("Invalid input");
-               break;
+                method?.Invoke(null, null);
             }
         }
 
