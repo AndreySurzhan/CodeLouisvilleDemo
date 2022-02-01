@@ -22,6 +22,14 @@ namespace AlphabetDemo
             PrintAlphabetSkipOneLetterUsingWhileLoop();
 
         }
+        //TASK: Possible to starn app and have promt displaying list of available methods to run. 
+        // Promt should ask a question which method to run
+        // input corresponding number or name of the method
+        //1. move methods to separate class file
+        //2. Create method that prints out method names
+        //3. Create logic to print out method names with question
+        //4. Create logic to accept user's input 
+        //5. based on user's input we should run method or promt an validation error
 
         static void PrintAlphabet()
         {
