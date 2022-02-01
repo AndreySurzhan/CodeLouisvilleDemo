@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CodeLouisvilleDemo;
+using System;
 
 namespace AlphabetDemo
 {
@@ -6,21 +7,52 @@ namespace AlphabetDemo
     {
         static void Main(string[] args)
         {
-            PrintAlphabet();
+            Console.WriteLine("Available methods:\n");
 
-            PrintAlphabetBackwards();
+            Console.WriteLine(@"
+            1 - PrintAlphabet
+            2 - PrintAlphabetBackwards
+            3 - PrintAlphabetSkipOneLetter
+            4 - PrintAlphabetUsingWhileLoop
+            5 - PrintAlphabetBackwardsUsingWhileLoop
+            6 - PrintAlphabetSkipOneLetterUsingWhileLoop");
 
-            PrintAlphabetSkipOneLetter();
+            Console.WriteLine("\n ==================================== \n ");
 
-            // these are just examples of same thing 
-            // using while loops instead of for loops
+            Console.WriteLine("Enter method number:");
 
-            PrintAlphabetUsingWhileLoop();
+            int userInput = Convert.ToInt32(Console.ReadLine());
 
-            PrintAlphabetBackwardsUsingWhileLoop();
+            switch (userInput)
+            {
+                case 1:
+                    AlphabetUtils.PrintAlphabet();
 
-            PrintAlphabetSkipOneLetterUsingWhileLoop();
+                    break;
+                case 2:
+                    AlphabetUtils.PrintAlphabetBackwards();
 
+                    break;
+                case 3:
+                    AlphabetUtils.PrintAlphabetSkipOneLetter();
+
+                    break;
+                case 4:
+                    AlphabetUtils.PrintAlphabetUsingWhileLoop();
+
+                    break;
+                case 5:
+                    AlphabetUtils.PrintAlphabetBackwardsUsingWhileLoop();
+
+                    break;
+                case 6:
+                    AlphabetUtils.PrintAlphabetSkipOneLetterUsingWhileLoop();
+
+                    break;
+                default:
+                    Console.WriteLine("Invalid input");
+               break;
+            }
         }
         //TASK: Possible to starn app and have promt displaying list of available methods to run. 
         // Promt should ask a question which method to run
@@ -31,90 +63,5 @@ namespace AlphabetDemo
         //4. Create logic to accept user's input 
         //5. based on user's input we should run method or promt an validation error
 
-        static void PrintAlphabet()
-        {
-            string alphabet = string.Empty;
-            for (char alpha = 'A'; alpha <= 'Z'; alpha++)
-            {
-                alphabet += alpha;
-            }
-
-            Console.WriteLine(alphabet);
-        }
-
-        static void PrintAlphabetBackwards()
-        {
-            string alphabet = string.Empty;
-            for (char alpha = 'Z'; alpha >= 'A'; alpha--)
-            {
-                alphabet += alpha;
-            }
-
-            Console.WriteLine(alphabet);
-        }
-
-        static void PrintAlphabetSkipOneLetter()
-        {
-            string alphabet = string.Empty;
-            for (char alpha = 'A'; alpha <= 'Z'; alpha = (char)(alpha + 2))
-            {
-                alphabet += alpha;
-            }
-
-            Console.WriteLine(alphabet);
-        }
-
-        static void PrintAlphabetUsingWhileLoop()
-        {
-            string alphabet = string.Empty;
-            char alpha = 'A';
-            while (alpha <= 'Z')
-            {
-                alphabet += alpha++;
-
-                // above line in same as this.  C# programmers like to cram as much into one line as possible :)
-                //alphabet += alpha;
-                //alpha++;
-
-                // it's also the same as.  but you have that ugly cast operation
-                //alphabet = alphabet + alpha;
-                //alpha = (char)(alpha + 1);
-            }
-
-            Console.WriteLine(alphabet);
-        }
-
-        static void PrintAlphabetBackwardsUsingWhileLoop()
-        {
-            string alphabet = string.Empty;
-            char alpha = 'Z';
-            while (alpha >= 'A')
-            {
-                alphabet += alpha--;
-
-                // same as
-                //alphabet += alpha;
-                //alpha--;
-
-                //and
-                //alphabet = alphabet + alpha;
-                //alpha = (char)(alpha - 1);
-            }
-
-            Console.WriteLine(alphabet);
-        }
-
-        static void PrintAlphabetSkipOneLetterUsingWhileLoop()
-        {
-            string alphabet = string.Empty;
-            char alpha = 'A';
-            while (alpha <= 'Z')
-            {
-                alphabet += alpha;
-                alpha = (char)(alpha + 2);
-            }
-
-            Console.WriteLine(alphabet);
-        }
     }
 }
