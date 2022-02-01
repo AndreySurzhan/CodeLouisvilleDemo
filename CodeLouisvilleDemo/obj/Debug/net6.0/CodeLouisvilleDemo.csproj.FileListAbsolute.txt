@@ -1,0 +1,15 @@
+C:\Users\surzh\OneDrive\Documents\Projects\CodeLouisvilleDemo\CodeLouisvilleDemo\bin\Debug\net6.0\CodeLouisvilleDemo.exe
+C:\Users\surzh\OneDrive\Documents\Projects\CodeLouisvilleDemo\CodeLouisvilleDemo\bin\Debug\net6.0\CodeLouisvilleDemo.deps.json
+C:\Users\surzh\OneDrive\Documents\Projects\CodeLouisvilleDemo\CodeLouisvilleDemo\bin\Debug\net6.0\CodeLouisvilleDemo.runtimeconfig.json
+C:\Users\surzh\OneDrive\Documents\Projects\CodeLouisvilleDemo\CodeLouisvilleDemo\bin\Debug\net6.0\CodeLouisvilleDemo.dll
+C:\Users\surzh\OneDrive\Documents\Projects\CodeLouisvilleDemo\CodeLouisvilleDemo\bin\Debug\net6.0\ref\CodeLouisvilleDemo.dll
+C:\Users\surzh\OneDrive\Documents\Projects\CodeLouisvilleDemo\CodeLouisvilleDemo\bin\Debug\net6.0\CodeLouisvilleDemo.pdb
+C:\Users\surzh\OneDrive\Documents\Projects\CodeLouisvilleDemo\CodeLouisvilleDemo\obj\Debug\net6.0\CodeLouisvilleDemo.csproj.AssemblyReference.cache
+C:\Users\surzh\OneDrive\Documents\Projects\CodeLouisvilleDemo\CodeLouisvilleDemo\obj\Debug\net6.0\CodeLouisvilleDemo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\surzh\OneDrive\Documents\Projects\CodeLouisvilleDemo\CodeLouisvilleDemo\obj\Debug\net6.0\CodeLouisvilleDemo.AssemblyInfoInputs.cache
+C:\Users\surzh\OneDrive\Documents\Projects\CodeLouisvilleDemo\CodeLouisvilleDemo\obj\Debug\net6.0\CodeLouisvilleDemo.AssemblyInfo.cs
+C:\Users\surzh\OneDrive\Documents\Projects\CodeLouisvilleDemo\CodeLouisvilleDemo\obj\Debug\net6.0\CodeLouisvilleDemo.csproj.CoreCompileInputs.cache
+C:\Users\surzh\OneDrive\Documents\Projects\CodeLouisvilleDemo\CodeLouisvilleDemo\obj\Debug\net6.0\CodeLouisvilleDemo.dll
+C:\Users\surzh\OneDrive\Documents\Projects\CodeLouisvilleDemo\CodeLouisvilleDemo\obj\Debug\net6.0\ref\CodeLouisvilleDemo.dll
+C:\Users\surzh\OneDrive\Documents\Projects\CodeLouisvilleDemo\CodeLouisvilleDemo\obj\Debug\net6.0\CodeLouisvilleDemo.pdb
+C:\Users\surzh\OneDrive\Documents\Projects\CodeLouisvilleDemo\CodeLouisvilleDemo\obj\Debug\net6.0\CodeLouisvilleDemo.genruntimeconfig.cache
