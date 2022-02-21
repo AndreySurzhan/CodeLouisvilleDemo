@@ -12,6 +12,6 @@
 
         public string Author { get; set; }
 
-        public IEnumerable<string> Genre { get; set; }
+        public IEnumerable<string>? Genre { get; set; }
     }
 }

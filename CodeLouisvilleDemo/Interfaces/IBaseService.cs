@@ -2,16 +2,10 @@
 {
     internal interface IBaseService<T>
     {
-        public string FilePath { get; set; }
-
-        public IEnumerable<T> GetItemsByParialName(string name);
-
-        public T GetItemById(int id);
-
-        public T Cerate(T item);
+        public Task<T> CreateAsync(T item);
 
         public T Update(T item);
 
-        public bool DeleteById(int id);
+        public Task<IEnumerable<T>?> GetAllAsync();
     }
 }
