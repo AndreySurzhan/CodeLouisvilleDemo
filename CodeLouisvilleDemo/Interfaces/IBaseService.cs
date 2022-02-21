@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CodeLouisvilleDemo.Interfaces
+﻿namespace CodeLouisvilleDemo.Interfaces
 {
     internal interface IBaseService<T>
     {
+        public string FilePath { get; set; }
+
         public IEnumerable<T> GetItemsByParialName(string name);
 
         public T GetItemById(int id);
