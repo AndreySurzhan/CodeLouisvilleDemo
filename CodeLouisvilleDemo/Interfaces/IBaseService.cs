@@ -4,8 +4,6 @@
     {
         public Task<T> CreateAsync(T item);
 
-        public T Update(T item);
-
         public Task<IEnumerable<T>?> GetAllAsync();
     }
 }

@@ -28,12 +28,23 @@ namespace AlphabetDemo
             {
                 Title = title,
                 Description = description,
-                NumberOfPages = numberOfPages
+                NumberOfPages = numberOfPages,
+                CoverType = "HARD",
+            };
+
+            var comicBook = new ComicBookModel()
+            {
+                Title = title,
+                Description = description,
+                NumberOfPages = numberOfPages,
+                IssueNumber = 33,
             };
 
             var bookService = new BookService("books.json");
+            var comicBookService = new ComicBookService("comicBooks.json");
 
             _ = await bookService.CreateAsync(book);
+            _ = await comicBookService.CreateAsync(comicBook);
 
         }
 

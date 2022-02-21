@@ -1,6 +1,6 @@
 ﻿namespace CodeLouisvilleDemo.Models
 {
-    internal class ComicBookModel
+    internal class ComicBookModel : BaseModel
     {
         public int IssueNumber { get; set; }
 
