@@ -1,6 +1,6 @@
 ﻿namespace CodeLouisvilleDemo.Models
 {
-    internal class BaseModel
+    public class BaseModel
     {
         public int Id { get; set; }
 

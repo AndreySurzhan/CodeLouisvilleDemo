@@ -1,11 +1,17 @@
-﻿using CodeLouisvilleDemo.Models;
+﻿using AnotherDemo.Interfaces;
+using CodeLouisvilleDemo.Models;
 
 namespace CodeLouisvilleDemo.Services
 {
-    internal class BookService : BaseService<BookModel>
+    public class BookService : BaseService<BookModel>, IBookService
     {
         public BookService(string fileName) : base(fileName)
         {
+        }
+
+        public IEnumerable<BookModel> GetBooksByCoverType(string coverType)
+        {
+            throw new NotImplementedException();
         }
     }
 }

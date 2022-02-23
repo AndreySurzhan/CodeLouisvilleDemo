@@ -3,7 +3,7 @@ using System.Text.Json;
 
 namespace CodeLouisvilleDemo.Services
 {
-    internal class BaseService<T> : IBaseService<T>
+    public class BaseService<T> : IBaseService<T>
     {
         private string FileName;
 

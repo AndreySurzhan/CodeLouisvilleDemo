@@ -1,11 +1,17 @@
-﻿using CodeLouisvilleDemo.Models;
+﻿using AnotherDemo.Interfaces;
+using CodeLouisvilleDemo.Models;
 
 namespace CodeLouisvilleDemo.Services
 {
-    internal class ComicBookService : BaseService<ComicBookModel>
+    public class ComicBookService : BaseService<ComicBookModel>, IComicBookService
     {
         public ComicBookService(string fileName) : base(fileName)
         {
+        }
+
+        public IEnumerable<ComicBookModel> GetComicbooksBySeries(string series)
+        {
+            throw new NotImplementedException();
         }
     }
 }

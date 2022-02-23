@@ -1,6 +1,6 @@
 ﻿namespace CodeLouisvilleDemo.Models
 {
-    internal class BookModel : BaseModel
+    public class BookModel : BaseModel
     {
         public string CoverType { get; set; }
     }
